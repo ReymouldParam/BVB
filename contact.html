@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/png" href="./asssets/images/BVB logo fevicon.svg">
+
+
+    <!-- carosel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./asssets/css/home.css">
+    <link rel="stylesheet" href="./asssets/css/contact.css" />
+    <link rel="stylesheet" href="./asssets/css/homepageMediaquery.css">
+</head>
+
+<body>
+    <div class="contact-page">
+        <header>
+            <nav>
+                <div class="logo-container">
+                    <a href=".">
+                        <img src="./asssets/images/LOGO BVB FINAL webp.webp" alt="logo">
+                    </a>
+                </div>
+                <div class="navigation-links-container">
+                    <a href="contact.html">
+                        <p id="contactUsBtn">Contact us</p>
+                    </a>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/profile.php?id=61560627686646" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bhalevindhubhojanam?utm_source=qr&igsh=cWs5bzlxYXN1c2t4"
+                            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Contact Us Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <form action="contact.php" method="post">
+                    <h1>Contact Us</h1>
+
+                    <!-- Full Name and Email on the same line -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname">Full Name*</label>
+                            <input name="fullName" type="text" id="fullname" placeholder="Full name" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="number">Number*</label>
+                            <input name="number" type="email" id="email" placeholder="Email" required />
+                        </div>
+                    </div>
+
+                    <!-- Location Radio Buttons -->
+                    <fieldset>
+                        <legend>Location*</legend>
+                        <label class="radio-container"><input name="location" type="radio" value="north" required />
+                            Bhale Vindhu</label>
+                        <label class="radio-container"><input name="location" type="radio" value="west" required />
+                            Chikoo & Cookie</label>
+                    </fieldset>
+
+                    <!-- Event Type Dropdown -->
+                    <label for="event">Event Type*</label>
+                    <select id="event" name="event" required>
+                        <option value="" disabled selected>Select event</option>
+                        <option>Birthday</option>
+                        <option>Kitty Party</option>
+                        <option>Wedding</option>
+                        <option>Engagement</option>
+                        <option>Gathering</option>
+                        <option>Social Events</option>
+                    </select>
+
+                    <!-- Event Date and Guests on the same line -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Event Date*</label>
+                            <input type="date" id="date" name="date" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">Number of Guests*</label>
+                            <input type="number" id="guests" name="guestNumber" placeholder="Guests" required />
+                        </div>
+                    </div>
+
+                    <!-- Message Field -->
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Leave a message or any special requests" rows="3" rows="3"></textarea>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- Email-integration -->
+        <div class="mail-success-box mail-success-box2" id="mail-success-box">
+            <div class="mail-notification-block">
+                <h2 id="mail-message" class="mail-message-heading mail-message-heading2">Mail Send Successfully To
+                    Bhale
+                    Vindhu Bhojanam
+                </h2>
+                <p id="mail-message-caption" class="mail-message-caption mail-message-caption2">Thank you for visit
+                </p>
+                <button class="close" id="close">OK</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
