@@ -53,29 +53,36 @@
             <div class="form-container">
                 <form action="contact.php" method="post">
                     <h1>Contact Us</h1>
-
+                
                     <!-- Full Name and Email on the same line -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fullname">Full Name*</label>
                             <input name="fullName" type="text" id="fullname" placeholder="Full name" required />
                         </div>
-
+                
                         <div class="form-group">
                             <label for="number">Number*</label>
-                            <input name="number" type="email" id="email" placeholder="Email" required />
+                            <input name="number" type="number" id="number" placeholder="number" required />
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input name="email" type="email" id="email" placeholder="email" />
                         </div>
                     </div>
-
+                
                     <!-- Location Radio Buttons -->
                     <fieldset>
                         <legend>Location*</legend>
-                        <label class="radio-container"><input name="location" type="radio" value="north" required />
-                            Bhale Vindhu</label>
-                        <label class="radio-container"><input name="location" type="radio" value="west" required />
-                            Chikoo & Cookie</label>
+                        <label class="radio-container">
+                            <input name="location" type="radio" value="north" required /> Bhale Vindhu Bhojanam
+                        </label>
+                        <label class="radio-container">
+                            <input name="location" type="radio" value="west" required /> Chikoo & Cookie play zone
+                        </label>
                     </fieldset>
-
+                
                     <!-- Event Type Dropdown -->
                     <label for="event">Event Type*</label>
                     <select id="event" name="event" required>
@@ -87,26 +94,28 @@
                         <option>Gathering</option>
                         <option>Social Events</option>
                     </select>
-
+                
                     <!-- Event Date and Guests on the same line -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="date">Event Date*</label>
                             <input type="date" id="date" name="date" required />
                         </div>
-
+                
                         <div class="form-group">
                             <label for="guests">Number of Guests*</label>
                             <input type="number" id="guests" name="guestNumber" placeholder="Guests" required />
                         </div>
                     </div>
-
+                
                     <!-- Message Field -->
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Leave a message or any special requests" rows="3" rows="3"></textarea>
-
+                    <textarea id="message" name="message" placeholder="Leave a message or any special requests" rows="3"></textarea>
+                
                     <!-- Submit Button -->
-                    <button type="submit" class="submit-button">Submit</button>
+                    <div class="submit-button-container">
+                        <button type="submit" class="submit-button">Submit</button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -125,6 +134,17 @@
             </div>
         </div>
     </div>
+<script>
+    
+//! Email-integration
+let closeButton = document.getElementById('close');
+let home_page_mail = document.getElementById('mail-success-box');
+closeButton.addEventListener('click', () => {
+    home_page_mail.style.display = "none";
+    $("body").css("overflow", "auto");
+});
+
+</script>
 
 </body>
 
