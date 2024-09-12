@@ -8,49 +8,61 @@
 }
 
 .contact-page {
-    height: 100vh; /* Ensure the page takes full viewport height */
+    height: 100vh;
+    /* Ensure the page takes full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Disable scroll */
+    overflow: hidden;
+    /* Disable scroll */
 }
 
 .form-section {
-    background-image: url('https://example.com/event-bg.jpg'); /* Replace with actual background */
+    background-image: url('https://example.com/event-bg.jpg');
+    /* Replace with actual background */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Reduced height to create space at top and bottom */
+    height: 90vh;
+    /* Reduced height to create space at top and bottom */
     width: 100%;
     margin-top: 90px;
-    padding-top: 5%; /* Add padding for space at the top */
-    padding-bottom: 5%; /* Add padding for space at the bottom */
+    padding-top: 5%;
+    /* Add padding for space at the top */
+    padding-bottom: 5%;
+    /* Add padding for space at the bottom */
 }
 
 
 .form-container {
     background-color: rgba(255, 255, 255, 1.5);
     border-radius: 12px;
-    padding: 8px; /* Reduced padding */
-    max-width: 930px; /* Slightly reduced width */
+    padding: 8px;
+    /* Reduced padding */
+    max-width: 930px;
+    /* Slightly reduced width */
     width: 90%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Reduced shadow for minimalistic feel */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    /* Reduced shadow for minimalistic feel */
     font-family: 'Poppins', sans-serif;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden; /* Disable internal scroll */
-    margin: 50px; /* Reduced margin */
+    overflow: hidden;
+    /* Disable internal scroll */
+    margin: 50px;
+    /* Reduced margin */
 }
 
 /* Form Title */
 h1 {
     text-align: center;
     font-size: 24px;
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px;
+    /* Reduced margin */
     color: var(--primary-color);
     font-weight: 600;
 }
@@ -65,18 +77,22 @@ label {
 }
 
 /* Input, Select, and Textarea Elements */
-input, select, textarea {
+input,
+select,
+textarea {
     width: 100%;
-    padding: 4px; /* Reduced padding */
-    margin-bottom: 4px; /* Reduced margin */
+    padding: 4px;
+    /* Reduced padding */
+    margin-bottom: 4px;
+    /* Reduced margin */
     border-radius: 6px;
     border: 2px solid darkgray;
     font-size: var(--size14);
     transition: border-color 0.3s;
 }
 
-legend{
-    font-size:16px;
+legend {
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 2px;
     display: block;
@@ -87,29 +103,38 @@ legend{
 /* Flexbox for Rows (Three Fields in One Line) */
 .form-row {
     display: flex;
-    gap: 10px; /* Space between the fields */
-    justify-content: space-between; /* Ensure even spacing */
+    gap: 10px;
+    /* Space between the fields */
+    justify-content: space-between;
+    /* Ensure even spacing */
 }
+
 .form-group {
-    flex: 1; /* Flex each item to take up equal space */
-    min-width: 30%; /* Ensure each field has a minimum width */
+    flex: 1;
+    /* Flex each item to take up equal space */
+    min-width: 30%;
+    /* Ensure each field has a minimum width */
 }
 
 /* Optional: Adjust the input width */
 input {
-    width: 100%; /* Ensure input fields take up the full width of their container */
-    padding: 8px; /* Adjust padding for better appearance */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    width: 100%;
+    /* Ensure input fields take up the full width of their container */
+    padding: 8px;
+    /* Adjust padding for better appearance */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
 }
 
 /* Radio Button Styling */
 fieldset {
     border: none;
     padding: 0;
-    margin-bottom: 8px; /* Reduced margin */
+    margin-bottom: 8px;
+    /* Reduced margin */
     font-size: var(--size14);
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 20%;
 }
 
@@ -123,18 +148,21 @@ fieldset {
     width: 12px;
     height: 12px;
 }
+
 /* Container Styling */
 .submit-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ensure the container takes up full width */
+    width: 100%;
+    /* Ensure the container takes up full width */
 }
 
 /* Submit Button Styling */
 .submit-button {
     width: 30%;
-    padding: 6px; /* Reduced padding */
+    padding: 6px;
+    /* Reduced padding */
     background-color: var(--secondary-color);
     color: white;
     border: none;
@@ -155,40 +183,121 @@ fieldset {
 /* Media query for screens 1600px and larger */
 @media (min-width: 1600px) {
     .contact-page {
-        padding: 0 5%; /* Add horizontal padding to ensure content isn't too close to the edges */
+        padding: 0 5%;
+        /* Add horizontal padding to ensure content isn't too close to the edges */
     }
 
     .form-section {
-        height: 100vh; /* Adjust height for larger screens, if needed */
-        padding-top: 2%; /* Adjust padding for a better fit */
+        height: 100vh;
+        /* Adjust height for larger screens, if needed */
+        padding-top: 2%;
+        /* Adjust padding for a better fit */
         padding-bottom: 2%;
     }
 
     .form-container {
-        max-width: 1300px; /* Increase maximum width for larger screens */
+        max-width: 1300px;
+        /* Increase maximum width for larger screens */
         padding: 2%;
     }
 
     h1 {
-        font-size: 28px; /* Increase font size for larger screens */
+        font-size: 28px;
+        /* Increase font size for larger screens */
     }
 
     /* Adjust input and textarea elements if needed */
-    input, select, textarea {
-        font-size: var(--size16); /* Increase font size for better readability on large screens */
+    input,
+    select,
+    textarea {
+        font-size: var(--size16);
+        /* Increase font size for better readability on large screens */
     }
 
     /* Adjust spacing for form rows and groups if needed */
     .form-row {
-        gap: 15px; /* Increase spacing between form fields */
+        gap: 15px;
+        /* Increase spacing between form fields */
     }
 
     .form-group {
-        min-width: 25%; /* Adjust minimum width for form groups */
+        min-width: 25%;
+        /* Adjust minimum width for form groups */
     }
 
     .submit-button {
-        width: 25%; /* Adjust button width if needed */
+        width: 25%;
+        /* Adjust button width if needed */
     }
 }
 
+/* mobile view  */
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .contact-page {
+        height: auto;
+        /* Allow height to adjust on smaller screens */
+    }
+
+    .form-section {
+        height: auto;
+        /* Allow height to adjust on smaller screens */
+        padding-top: 0%;
+        padding-bottom: 2%;
+    }
+
+    .form-container {
+        max-width: 100%;
+        /* Full width for mobile */
+        margin: 10px;
+        /* Adjusted margin */
+    }
+
+    h1 {
+        font-size: 18px;
+        /* Adjusted font size */
+    }
+
+    label {
+        font-size: 12px;
+        /* Adjusted font size */
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 6px;
+        /* Adjusted padding */
+        margin-bottom: 8px;
+        /* Adjusted margin */
+    }
+
+    legend {
+        font-size: 12px;
+        /* Adjusted font size */
+    }
+
+    .form-row {
+        flex-direction: column;
+        /* Stack fields vertically on mobile */
+    }
+
+    .form-group {
+        min-width: auto;
+        /* Allow fields to use available space */
+    }
+
+    fieldset {
+        flex-direction: column;
+        /* Stack radio buttons vertically on mobile */
+        gap: 10px;
+        /* Adjusted gap */
+    }
+
+    .submit-button {
+        width: 80%;
+        /* Adjusted width for mobile */
+        padding: 10px;
+        /* Adjusted padding */
+    }
+}
