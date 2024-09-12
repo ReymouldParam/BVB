@@ -36,7 +36,7 @@
                     </a>
                 </div>
                 <div class="navigation-links-container">
-                    <a href="contact.html">
+                    <a href="contact">
                         <p id="contactUsBtn">Contact us</p>
                     </a>
                     <div class="social-media">
@@ -120,29 +120,70 @@
                 </form>
             </div>
         </section>
-        <!-- Email-integration -->
-        <div class="mail-success-box mail-success-box2" id="mail-success-box">
-            <div class="mail-notification-block">
-                <h2 id="mail-message" class="mail-message-heading mail-message-heading2">Mail Send Successfully To
-                    Bhale
-                    Vindhu Bhojanam
-                </h2>
-                <p id="mail-message-caption" class="mail-message-caption mail-message-caption2">Thank you for visit
-                </p>
-                <button class="close" id="close">OK</button>
+        <!-- Success Popup -->
+        <div class="popup-success-box" id="popup-success-box" style="display: none;">
+            <div class="popup-content-block">
+                <h2 class="popup-success-heading">Mail Sent Successfully to Bhale Vindhu Bhojanam</h2>
+                <p class="popup-success-caption">Thank you for visiting</p>
+                <button class="popup-close-btn" id="popup-success-close-btn">OK</button>
             </div>
         </div>
-    </div>
-    <!-- js mail  -->
-    <script>
-        //! Email-integration
-        let closeButton = document.getElementById('close');
-        let home_page_mail = document.getElementById('mail-success-box');
-        closeButton.addEventListener('click', () => {
-            home_page_mail.style.display = "none";
-            $("body").css("overflow", "auto");
-        });
 
+        <!-- Failure Popup -->
+        <div class="popup-failure-box" id="popup-failure-box" style="display: none;">
+            <div class="popup-content-block">
+                <h2 class="popup-failure-heading">Mail Failed to Send</h2>
+                <p class="popup-failure-caption">Please try again later</p>
+                <button class="popup-close-btn" id="popup-failure-close-btn">OK</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const flagValue = urlParams.get('emailSuccess');
+    
+            // Elements for popups
+            const successPopup = document.getElementById('popup-success-box');
+            const failurePopup = document.getElementById('popup-failure-box');
+    
+            // Show the appropriate popup
+            if (flagValue === 'true') {
+                // Show success dialog box
+                successPopup.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent page scroll
+            } else if (flagValue === 'false') {
+                // Show failure dialog box
+                failurePopup.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent page scroll
+            }
+    
+            // Clear parameters from URL
+            const baseUrl = window.location.href.split('?')[0];
+            history.replaceState(null, null, baseUrl);
+    
+            // Close button functionality for success popup
+            const successCloseButton = document.getElementById('popup-success-close-btn');
+            if (successCloseButton) {
+                successCloseButton.addEventListener('click', function () {
+                    successPopup.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Restore page scroll
+                });
+            }
+    
+            // Close button functionality for failure popup
+            const failureCloseButton = document.getElementById('popup-failure-close-btn');
+            if (failureCloseButton) {
+                failureCloseButton.addEventListener('click', function () {
+                    failurePopup.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Restore page scroll
+                });
+            }
+        });
     </script>
+    
 </body>
+
 </html>

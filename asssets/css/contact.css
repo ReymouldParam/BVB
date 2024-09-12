@@ -178,6 +178,90 @@ fieldset {
 .submit-button:hover {
     background-color: var(--primary-color);
 }
+/* Success popup box styles */
+.popup-success-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    border: 2px solid var(--primary-color); /* Using primary color for success */
+}
+
+/* Failure popup box styles */
+.popup-failure-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+    border: 2px solid #dc3545; /* Red border for failure */
+}
+
+/* General content inside both popups */
+.popup-content-block {
+    padding: 20px;
+}
+
+/* Success-specific heading and caption */
+.popup-success-heading {
+    font-size: var(--size24);
+    margin-bottom: 10px;
+    color: var(--primary-color); /* Primary color for success */
+}
+
+.popup-success-caption {
+    font-size: var(--size18);
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Primary color for success */
+}
+
+/* Failure-specific heading and caption */
+.popup-failure-heading {
+    font-size: var(--size24);
+    margin-bottom: 10px;
+    color: #dc3545; /* Red color for failure */
+}
+
+.popup-failure-caption {
+    font-size: var(--size18);
+    margin-bottom: 20px;
+    color: #dc3545; /* Red color for failure */
+}
+
+/* Close button styles */
+.popup-close-btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: var(--size14);
+    transition: background-color 0.3s ease;
+}
+
+.popup-close-btn:hover {
+    background-color:maroon; /* Darker secondary color on hover */
+}
+
+/* Disable scrolling when popup is shown */
+body.popup-visible {
+    overflow: hidden;
+}
 
 /*large screens */
 /* Media query for screens 1600px and larger */
@@ -299,5 +383,23 @@ fieldset {
         /* Adjusted width for mobile */
         padding: 10px;
         /* Adjusted padding */
+    }
+}
+/* mobile pop-ups */
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .popup-success-heading,
+    .popup-failure-heading {
+        font-size: var(--size18); /* Reduce heading size for mobile */
+    }
+
+    .popup-success-caption,
+    .popup-failure-caption {
+        font-size: var(--size14); /* Reduce caption size for mobile */
+    }
+
+    .popup-close-btn {
+        font-size: var(--size14); /* Adjust close button font size for mobile */
     }
 }
