@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $primaryRecipient = "bhalevindubhojanam1@gmail.com";
     $secondaryRecipient = "reymould.social@gmail.com";
     
-    // Email headers (optional, but recommended for email formatting)
+    // Email headers
     $headers = "From: no-reply@yourdomain.com\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -34,13 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $primaryMailSent = mail($primaryRecipient, $subject, $body, $headers);
     $secondaryMailSent = mail($secondaryRecipient, $subject, $body, $headers);
 
-    // Check if both emails were successfully sent
+    // Redirect based on success or failure
     if ($primaryMailSent && $secondaryMailSent) {
-        // Redirect on success
-        header("Location: contact.html?emailSuccess=true");
+        header("Location: .?emailSuccess=true");
     } else {
-        // Redirect on failure
-        header("Location: contact.html?emailSuccess=false");
+        header("Location: contact?emailSuccess=false");
     }
     exit;
 }
