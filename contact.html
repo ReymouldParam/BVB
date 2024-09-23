@@ -43,8 +43,10 @@
                         <a href="https://www.facebook.com/profile.php?id=61560627686646" target="_blank">
                             <i class="fa-brands fa-facebook"></i></a>
 
-                        <a href="https://www.instagram.com/bhalevindhubhojanam" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@BhaleVinduBhojanam" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/bhalevindhubhojanam" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@BhaleVinduBhojanam" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </nav>
@@ -145,11 +147,11 @@
         document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
             const flagValue = urlParams.get('emailSuccess');
-    
+
             // Elements for popups
             const successPopup = document.getElementById('popup-success-box');
             const failurePopup = document.getElementById('popup-failure-box');
-    
+
             // Show the appropriate popup
             if (flagValue === 'true') {
                 // Show success dialog box
@@ -160,11 +162,11 @@
                 failurePopup.style.display = 'flex';
                 document.body.style.overflow = 'hidden'; // Prevent page scroll
             }
-    
+
             // Clear parameters from URL
             const baseUrl = window.location.href.split('?')[0];
             history.replaceState(null, null, baseUrl);
-    
+
             // Close button functionality for success popup
             const successCloseButton = document.getElementById('popup-success-close-btn');
             if (successCloseButton) {
@@ -173,7 +175,7 @@
                     document.body.style.overflow = 'auto'; // Restore page scroll
                 });
             }
-    
+
             // Close button functionality for failure popup
             const failureCloseButton = document.getElementById('popup-failure-close-btn');
             if (failureCloseButton) {
@@ -184,7 +186,7 @@
             }
         });
     </script>
-    
+
 </body>
 
 </html>
