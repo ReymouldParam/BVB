@@ -1,14 +1,21 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Retrieve form data
-    $fullName = isset($_POST['fullName']) ? $_POST['fullName'] : '';
-    $number = isset($_POST['number']) ? $_POST['number'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : ''; // Optional email field
-    $location = isset($_POST['location']) ? $_POST['location'] : '';
-    $event = isset($_POST['event']) ? $_POST['event'] : '';
-    $date = isset($_POST['date']) ? $_POST['date'] : '';
-    $guestNumber = isset($_POST['guestNumber']) ? $_POST['guestNumber'] : '';
-    $message = isset($_POST['message']) ? $_POST['message'] : '';
+    // Retrieve form data with validation
+    $fullName = isset($_POST['fullName']) ? trim($_POST['fullName']) : '';
+    $number = isset($_POST['number']) ? trim($_POST['number']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : ''; // Optional email field
+    $location = isset($_POST['location']) ? trim($_POST['location']) : '';
+    $event = isset($_POST['event']) ? trim($_POST['event']) : '';
+    $date = isset($_POST['date']) ? trim($_POST['date']) : '';
+    $guestNumber = isset($_POST['guestNumber']) ? trim($_POST['guestNumber']) : '';
+    $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+
+    // Validate required fields
+    if (empty($fullName) || empty($number) || empty($event) || empty($date)) {
+        // Redirect with an error if required fields are missing
+        header("Location: contact.php?emailSuccess=false");
+        exit;
+    }
 
     // Construct email content
     $subject = "Enquiry from Website";
@@ -36,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Redirect based on success or failure
     if ($primaryMailSent && $secondaryMailSent) {
-        header("Location: .?emailSuccess=true");
+        header("Location: .?emailSuccess=true"); // Assuming contact.php is your form page
     } else {
-        header("Location: contact?emailSuccess=false");
+        header("Location: contact?emailSuccess=false"); // Assuming contact.php is your form page
     }
     exit;
 }
