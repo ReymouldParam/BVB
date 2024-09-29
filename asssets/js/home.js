@@ -1,16 +1,18 @@
-//! Carousel
 $(document).ready(function () {
     $('.carousel1').slick({
         dots: false,
-        arrows: false,
+        arrows: true, // Enable arrows
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 6000,
-        pauseOnHover: false
+        pauseOnHover: false,
+        prevArrow: "<div class='slick-prev'><i class='fa-solid fa-chevron-right'></i></div>", // Left arrow for previous
+        nextArrow: "<div class='slick-next'><i class='fa-solid fa-chevron-left'></i></div>"  // Right arrow for next
     });
 });
+
 $(document).ready(function () {
     $('.carousel2').slick({
         dots: false,

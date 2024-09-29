@@ -38,7 +38,7 @@
     }
 
     .section4 {
-        padding-top: 220px;
+        padding-top:0px;
     }
 
     .book-a-table-container {
@@ -76,14 +76,14 @@
         width: 73%;
     }
 
-    .section3-white-bgc {
+    /* .section3-white-bgc {
         width: 68%;
         margin: auto;
         padding: 40px 50px 20px 50px;
-    }
+    } */
 
     .section4 {
-        padding-top: 220px;
+        padding-top:0px;
     }
 
     .book-a-table-container {
@@ -142,7 +142,7 @@
     }
 
     .section4 {
-        padding-top: 220px;
+        padding-top: 0px;
     }
 
     .book-a-table-container {
@@ -183,7 +183,7 @@
     }
 
     .section4 {
-        padding-top: 180px;
+        padding-top: 0px;
     }
 
     .email-address {
