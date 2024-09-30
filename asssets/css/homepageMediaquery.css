@@ -283,7 +283,7 @@
     }
 
     .section4 {
-        padding-top: 220px;
+        padding-top: 0;
     }
 
     .book-a-table-container {
@@ -354,7 +354,7 @@
     }
 
     .section4 {
-        padding-top: 270px;
+        padding-top: 0;
     }
 
     .section4-container-parent {
@@ -395,11 +395,11 @@
     }
 
     .section3-para {
-        line-height: 30px;
+        /* line-height: 30px; */
     }
 
     .section4 {
-        padding-top: 250px;
+        padding-top: 0;
     }
 
 }
@@ -433,7 +433,7 @@
     }
 
     .section4 {
-        padding-top: 230px;
+        padding-top: 0;
     }
 }
 
@@ -461,7 +461,7 @@
     } */
 
     .section4 {
-        padding-top: 210px;
+        padding-top: 0;
     }
 
     .licience-text {
@@ -481,7 +481,7 @@
     }
 
     .section4 {
-        padding-top: 260px;
+        padding-top:0;
     }
 
     .book-a-table-container {
@@ -513,7 +513,7 @@
     }
 
     .section4 {
-        padding-top: 300px;
+        padding-top: 0;
     }
 
 }
@@ -529,7 +529,7 @@
     }
 
     .section4 {
-        padding-top: 320px;
+        padding-top: 0;
     }
 
 }
@@ -550,7 +550,7 @@
     }
 
     .section4 {
-        padding-top: 310px;
+        padding-top: 0;
     }
 
 }
@@ -574,7 +574,7 @@
     }
 
     .section4 {
-        padding-top: 340px;
+        padding-top: 0;
     }
 
     .starting {
@@ -626,7 +626,7 @@
     }
 
     .section4 {
-        padding-top: 350px;
+        padding-top:0;
     }
 
 }
@@ -650,7 +650,7 @@
     }
 
     .section4 {
-        padding-top: 360px;
+        padding-top:0;
     }
 
 }
@@ -679,7 +679,7 @@
     }
 
     .section4 {
-        padding-top: 400px;
+        padding-top: 0;
     }
 
 }

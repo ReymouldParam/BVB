@@ -31,9 +31,11 @@ header {
     top: 0;
     box-shadow: 0px 1px 10px var(--primary-color);
 }
-.contact-us{
+
+.contact-us {
     margin-top: 10%;
 }
+
 nav {
     width: 73%;
     margin: auto;
@@ -172,15 +174,21 @@ nav {
 }
 
 /*************************************************** section2 */
+
+
 .mini-carousel {
-    position: relative; /* Enables relative positioning */
-    width: 100%; /* Full width of the container */
+    position: relative;
+    /* Enables relative positioning */
+    width: 100%;
+    /* Full width of the container */
 }
 
 .carousel-section1-img-container {
     position: relative;
-    width: 100%; /* Ensure image takes the full width */
-    height: 100vh; /* Full screen height for the carousel */
+    width: 100%;
+    /* Ensure image takes the full width */
+    height: 100vh;
+    /* Full screen height for the carousel */
     overflow: hidden;
 }
 
@@ -189,27 +197,42 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Cover the entire container */
-    object-fit: cover; /* Ensures the image covers the space while keeping the aspect ratio */
-    z-index: 1; /* Push the image behind other content */
+    height: 100%;
+    /* Cover the entire container */
+    object-fit: cover;
+    /* Ensures the image covers the space while keeping the aspect ratio */
+    z-index: 1;
+    /* Push the image behind other content */
 }
 
 .container-on-img {
-    position: absolute; /* Allows the container to be placed on top of the image */
-    top: 0; /* Aligns the container at the top of the image */
+    position: absolute;
+    /* Allows the container to be placed on top of the image */
+    top: 0;
+    /* Aligns the container at the top of the image */
     left: 15%;
-    height: 100%; /* Make the container fill the image height */
-    width:40%; /* Ensure it covers the image horizontally */
-    z-index: 2; /* Ensures this container appears above the image */
-    background-color: rgba(255, 255, 255, 1.2); /* Slight transparency for readability */
+    height: 100%;
+    /* Make the container fill the image height */
+    width: 40%;
+    /* Ensure it covers the image horizontally */
+    z-index: 2;
+    /* Ensures this container appears above the image */
+    background-color: rgba(255, 255, 255, 1.2);
+    /* Slight transparency for readability */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    align-items: flex-start; /* Horizontally center content */
-    padding: 20px; /* Padding inside the container */
-    text-align: left; /* Center align text */
-    box-shadow: 0 4px 10px rgba(245, 110, 9, 0.5); /* Adds shadow for a professional look */
-    border-radius: 5px; /* Rounded corners */
+    justify-content: center;
+    /* Vertically center content */
+    align-items: flex-start;
+    /* Horizontally center content */
+    padding: 20px;
+    /* Padding inside the container */
+    text-align: left;
+    /* Center align text */
+    box-shadow: 0 4px 10px rgba(245, 110, 9, 0.5);
+    /* Adds shadow for a professional look */
+    border-radius: 5px;
+    /* Rounded corners */
 }
 
 
@@ -220,8 +243,10 @@ nav {
     width: 100%;
 }
 
-.table-btn, .banquet-btn {
-    background-color: #9F1110; /* Use your preferred color */
+.table-btn,
+.banquet-btn {
+    background-color: #9F1110;
+    /* Use your preferred color */
     color: white;
     padding: 10px;
     border: none;
@@ -231,12 +256,15 @@ nav {
     font-size: 14px;
 }
 
-.table-btn i, .banquet-btn i {
+.table-btn i,
+.banquet-btn i {
     margin-left: 8px;
 }
 
-.table-btn:hover, .banquet-btn:hover {
-    background-color: #F56E09; /* Change color on hover */
+.table-btn:hover,
+.banquet-btn:hover {
+    background-color: #F56E09;
+    /* Change color on hover */
 }
 
 .section3-heading {
@@ -253,6 +281,7 @@ nav {
     text-align: left;
     line-height: 1.7;
 }
+
 .logo-container2 {
     width: 60%;
     height: auto;
@@ -262,6 +291,7 @@ nav {
 .logo-container2 img {
     width: 100%;
 }
+
 .logo-container3 {
     width: 60%;
     height: auto;
@@ -274,21 +304,25 @@ nav {
 
 
 
-.chicoo-con{
+.chicoo-con {
     margin-top: -40px;
 }
+
 /* Slick arrows styling */
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    background-color: transparent; /* No background */
+    background-color: transparent;
+    /* No background */
     border: none;
     outline: none;
     font-size: 30px;
-    color: white; /* Black arrow color */
+    color: white;
+    /* Black arrow color */
     width: 40px;
     height: 40px;
     display: flex;
@@ -298,47 +332,149 @@ nav {
 
 /* Left arrow position (this is now the next arrow) */
 .slick-next {
-    left: 10px; /* Adjust as needed */
+    left: 10px;
+    /* Adjust as needed */
 }
 
 /* Right arrow position (this is now the prev arrow) */
 .slick-prev {
-    right: 10px; /* Adjust as needed */
+    right: 10px;
+    /* Adjust as needed */
 }
 
 /* Optional: Hover effect */
-.slick-prev:hover, .slick-next:hover {
-    color: orange; /* Change color on hover */
+.slick-prev:hover,
+.slick-next:hover {
+    color: orange;
+    /* Change color on hover */
 }
 
-@media screen and (min-width:1600px){
-    .container-on-img{
+@media screen and (min-width:1600px) {
+    .container-on-img {
         justify-content: center;
         gap: 8%;
     }
-    .section1-btn-container{
+
+    .section1-btn-container {
         margin-top: 0;
         padding-bottom: 0;
         width: 80%;
     }
-    .section3-para{
+
+    .section3-para {
         font-size: 20px;
     }
-    .table-btn, .banquet-btn{
+
+    .table-btn,
+    .banquet-btn {
         font-size: 20px;
     }
-    .logo-container2{
+
+    .logo-container2 {
         width: 80%;
-        
+
     }
-    .logo-container3{
+
+    .logo-container3 {
         width: 80%;
         margin-top: -40px;
     }
-    .chicoo-con{
+
+    .chicoo-con {
         margin-top: -150px;
     }
 }
+
+/* mobile view  */
+@media (max-width: 768px) {
+
+    /* Adjust image container height for mobile */
+    .carousel-section1-img-container {
+        height: 75vh;
+        /* Reduce height for a more compact layout */
+    }
+
+    /* Compress the container on the image */
+    .container-on-img {
+        width: 70%;
+        height:100%;
+        /* Reduce width for a more compact fit */
+        left: 7.5%;
+        /* Center the container more precisely */
+        padding: 8px;
+        /* Reduce padding for compactness */
+        font-size: 12px;
+        /* Decrease font size to fit content */
+    }
+
+    /* Compress logo containers */
+    .logo-container2 {
+        width: 80%;
+        height: 50px;
+        /* Reduce width for compact design */
+        margin-bottom: 10px;
+    }
+
+    .logo-container3 {
+        width: 80%;
+        /* Reduce width for compact design */
+        margin-top: 2%;
+    }
+
+    /* Compress button container */
+    .section1-btn-container {
+        margin-top: 10px;
+        padding-bottom: 5px;
+        width: 100%;
+    }
+
+    /* Compress button size and spacing */
+    .table-btn,
+    .banquet-btn {
+        padding: 6px 8px;
+        /* Reduce padding */
+        font-size: 14px;
+        /* Smaller font size for buttons */
+        margin-right: 5px;
+        /* Maintain space between buttons */
+    }
+
+    /* Compress heading and paragraph */
+    .section3-heading {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .section3-para {
+        font-size: 14px;
+        margin-top: 5px;
+        /* Tighter line spacing for compact view */
+    }
+
+    /* Adjust Chicoo container margin */
+    .chicoo-con {
+        margin-top: -20px;
+        /* Ensure no negative margin */
+    }
+
+    /* Adjust slick arrows size and position */
+    .slick-prev,
+    .slick-next {
+        font-size: 15px;
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Adjust arrow positioning */
+    .slick-next {
+        left: 2px;
+    }
+
+    .slick-prev {
+        right: 2px;
+    }
+}
+
 
 /* *****************************Section4 */
 .section4 {
