@@ -212,6 +212,8 @@ nav {
     border-radius: 5px; /* Rounded corners */
 }
 
+
+
 .section1-btn-container {
     margin-top: 20px;
     padding-bottom: 20px;
@@ -249,16 +251,29 @@ nav {
     color: #333;
     margin-top: 10px;
     text-align: left;
+    line-height: 1.7;
 }
 .logo-container2 {
     width: 60%;
     height: auto;
-    margin-top: 7%;
+    margin-top: 10%;
 }
 
 .logo-container2 img {
     width: 100%;
 }
+.logo-container3 {
+    width: 60%;
+    height: auto;
+    margin-top: 7%;
+}
+
+.logo-container3 img {
+    width: 100%;
+}
+
+
+
 .chicoo-con{
     margin-top: -40px;
 }
@@ -296,9 +311,38 @@ nav {
     color: orange; /* Change color on hover */
 }
 
+@media screen and (min-width:1600px){
+    .container-on-img{
+        justify-content: center;
+        gap: 8%;
+    }
+    .section1-btn-container{
+        margin-top: 0;
+        padding-bottom: 0;
+        width: 80%;
+    }
+    .section3-para{
+        font-size: 20px;
+    }
+    .table-btn, .banquet-btn{
+        font-size: 20px;
+    }
+    .logo-container2{
+        width: 80%;
+        
+    }
+    .logo-container3{
+        width: 80%;
+        margin-top: -40px;
+    }
+    .chicoo-con{
+        margin-top: -150px;
+    }
+}
+
 /* *****************************Section4 */
 .section4 {
-    padding-top: 240px;
+    padding-top: 0;
 }
 
 .section4-container-parent {
