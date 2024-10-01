@@ -279,7 +279,7 @@ nav {
     color: #333;
     margin-top: 10px;
     text-align: left;
-    line-height: 1.7;
+    line-height: 1.4;
 }
 
 .logo-container2 {
@@ -359,6 +359,10 @@ nav {
         margin-top: 0;
         padding-bottom: 0;
         width: 80%;
+    }
+
+    .section3-heading{
+        padding-bottom: 20px;
     }
 
     .section3-para {

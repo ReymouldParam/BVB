@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHALEVINDHUBHOJANAM-CONTACT US</title>
+    <!-- title -->
+    <meta name="title" content="Contact Us | Bhale Vindhu Bhojanam & Chikoo & Cookies" />
+    <title>Contact Us | Bhale Vindhu Bhojanam & Chikoo & Cookies
+    </title>
     <link rel="icon" type="image/png" href="./asssets/images/BVB logo fevicon.svg">
     <!-- Google Search Console -->
     <meta name="google-site-verification" content="1FoMKCyiTkvbN6Gdl4tgLZBEWlgOxNaRfutRbv5wzeY" />
     <!-- keywords -->
     <meta name="keywords"
-        content="best restaurants near me, best restaurant in hyderabad, indian restaurant near me, best thalis in hyderabad, indian food near me, banquets near me, banquet halls, best banquet halls near me, good banquet halls near me, best banquet halls in hyderabad, best banquet halls, top banquet halls near me, party hall, party halls near me, birthday party venues near me, best play zone near me, fun play zone near me, event venues near me"/>
-
+        content="best restaurants near me, best restaurant in hyderabad, indian restaurant near me, best thalis in hyderabad, indian food near me, banquets near me, banquet halls, best banquet halls near me, good banquet halls near me, best banquet halls in hyderabad, best banquet halls, top banquet halls near me, party hall, party halls near me, birthday party venues near me, best play zone near me, fun play zone near me, event venues near me, Play zone and party hall, Restaurant and banquets" />
+    <!-- description -->
+    <meta name="description"
+        content="Have questions about Bhale Vindhu Bhojanam or Chikoo & Cookies? Get in touch for banquet reservations or to plan a fun-filled time & your go to kids parties" />
     <!-- canonical tag -->
     <link rel="canonical" href="https://bhalevindhubhojanam.com/" />
     <!-- carosel -->
@@ -154,7 +159,7 @@
         // Get URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const flagValue = urlParams.get('emailSuccess');
-    
+
         // Check if email response is true or false
         if (flagValue === 'true') {
             // Show success dialog box
@@ -163,11 +168,11 @@
             // Show failure dialog box
             document.getElementById('popup-failure-box').style.display = 'block';
         }
-    
+
         // Clear param from URL after showing response
         const baseUrl = window.location.href.split('?')[0];
         history.replaceState(null, null, baseUrl);
-    
+
         // Add click event to close the popups
         document.getElementById('popup-success-close-btn').addEventListener('click', () => {
             document.getElementById('popup-success-box').style.display = 'none';
@@ -176,7 +181,7 @@
             document.getElementById('popup-failure-box').style.display = 'none';
         });
     </script>
-    
+
 </body>
 
 </html>
