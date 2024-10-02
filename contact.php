@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Validate required fields
     if (empty($fullName) || empty($number) || empty($event) || empty($date)) {
         // Redirect with an error if required fields are missing
-        header("Location: contact.php?emailSuccess=false");
+        header("Location: contact?emailSuccess=false");
         exit;
     }
 
@@ -28,22 +28,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $body .= "Number of Guests: $guestNumber\n";
     $body .= "Message: $message";
 
-    // Email recipients
+    // Email recipient
     $primaryRecipient = "bhalevindubhojanam1@gmail.com";
+
     // Email headers
     $headers = "From: no-reply@yourdomain.com\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Send email to both recipients
+    // Send email to the primary recipient
     $primaryMailSent = mail($primaryRecipient, $subject, $body, $headers);
-    $secondaryMailSent = mail($secondaryRecipient, $subject, $body, $headers);
 
     // Redirect based on success or failure
-    if ($primaryMailSent && $secondaryMailSent) {
-        header("Location: .?emailSuccess=true"); // Assuming contact.php is your form page
+    if ($primaryMailSent) {
+        header("Location: .?emailSuccess=true");
     } else {
-        header("Location: contact?emailSuccess=false"); // Assuming contact.php is your form page
+        header("Location: contact?emailSuccess=false");
     }
     exit;
 }
