@@ -30,8 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Email recipients
     $primaryRecipient = "bhalevindubhojanam1@gmail.com";
-    $secondaryRecipient = "reymould.social@gmail.com";
-    
     // Email headers
     $headers = "From: no-reply@yourdomain.com\r\n";
     $headers .= "Reply-To: $email\r\n";
