@@ -5,7 +5,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 6000,
         pauseOnHover: false,
         prevArrow: "<div class='slick-prev'><i class='fa-solid fa-chevron-right'></i></div>", // Left arrow for previous
