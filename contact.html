@@ -163,7 +163,7 @@
         if (flagValue === 'true') {
             // Show success dialog box
             document.getElementById('popup-success-box').style.display = 'block';
-        } else if (flagValue === 'false'){
+        } else if (flagValue === 'false') {
             // Show failure dialog box
             document.getElementById('popup-failure-box').style.display = 'block';
         }
@@ -178,6 +178,12 @@
         });
         document.getElementById('popup-failure-close-btn').addEventListener('click', () => {
             document.getElementById('popup-failure-box').style.display = 'none';
+        });
+    </script>
+    <!-- Google tag (gtag.js) event -->
+    <script>
+        gtag('event', 'conversion_event_contact', {
+            // <event_parameters>
         });
     </script>
 
