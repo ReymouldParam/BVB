@@ -1021,7 +1021,3 @@ nav {
 .close:hover {
     background-color: var(--primary-color);
 }
-.anchor-tag{
-    text-decoration: none;
-    color: #000;
-}
